@@ -18,7 +18,7 @@ a {
     width: 100%;
     background-color: rgb(87, 85, 85);
 }
-.nav-item:hover {
+.nav-item:hover { /*при наведении на любой из Пунктов Первого списка, к нему применятся следующие свойства. Так же это свойство останется применённым, когда курсор перейдет на (дочерний) выпадающий список*/
     background-color: rgb(104, 142, 153);
 }
 .nav-link {
@@ -40,21 +40,22 @@ a {
 .nav-second-link {
     display: block;
     padding: 5px 25px;
-    background-color: rgb(120, 165, 179);
-    border-left: 4px solid rgb(120, 165, 179);
+
     font-size: 16px;
     text-transform: capitalize;
     color: #fff;
 }
-.nav-second-link:hover {
-    border-left: 4px solid rgb(87, 85, 85);
-    background-color: rgb(184, 175, 175);
-}
-.nav-item:hover .nav-second-list {
+.nav-item:hover .nav-second-list { /*при наведении на любой из Пунктов Первого списка, в случаи если в нем есть дочерний (второй) список, тогда к Второму списку применятся следующие свойства*/
     display: block;
 }
 .nav-second-item {
     position: relative;
+    background-color: rgb(120, 165, 179);
+    border-left: 4px solid rgb(120, 165, 179);
+}
+.nav-second-item:hover { /*при наведении на любой из Пунктов дочернего (второго) списка, к нему применятся следующие свойства*/
+    border-left: 4px solid rgb(87, 85, 85);
+    background-color: rgb(184, 175, 175);
 }
 .nav-third-list {
     display: none;
@@ -73,10 +74,14 @@ a {
     color: #fff;
     border-left: 4px solid rgb(120, 165, 179);
 }
-.nav-second-item:hover .nav-third-list {
+.nav-second-item:hover .nav-third-list { /*при наведении на любой из Пунктов дочернего (второго) списка, в случаи если в нем есть дочерний (Третий) список, тогда к дочернему (третьему) списку применятся следующие свойства*/
     display: block;
 }
-.nav-third-link:hover {
+.nav-third-link:hover { /*при наведении на любой пункт (третьего) списка, к нему применятся следующие свойства*/
+    border-left: 4px solid rgb(87, 85, 85);
+    background-color: rgb(184, 175, 175);
+}
+.nav-second-link:hover .nav-second-item { /*при наведении на ссылку (Второго) списка, для пункта (второго) списка применятся следующие свойства*/
     border-left: 4px solid rgb(87, 85, 85);
     background-color: rgb(184, 175, 175);
 }
